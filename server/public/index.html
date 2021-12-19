@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,22 +10,21 @@
     <script src="client.js"></script>
     <title>Jquery server calculator</title>
 </head>
+
 <body>
-    <h1>Weekend Jquery server calculator</h1> 
-    <input 
-    type="number"
-    placeholder="numerator"
-    id="numeratorInput"
-    >
-    <button id="plusButton">+</button>
-    <button id="minusButton">-</button>
-    <button id="timesButton">*</button>
-    <button id="divideButton">/</button>
-    <input 
-    type="number" 
-    placeholder="denominator" 
-    id="numeratorInput">
+    <h1>Weekend Jquery server calculator</h1>
+    <div id="container"></div>
+    <input type="text" placeholder="numerator" id="numeratorInput">
+    <button id="plusButton" class="mathButton">+</button>
+    <button id="minusButton" class="mathButton">-</button>
+    <button id="timesButton" class="mathButton">*</button>
+    <button id="divideButton" class="mathButton">/</button>
+    <input type="text" placeholder="denominator" id="denominatorInput">
     <button id="equalsButton">=</button>
     <button id="clearButton">C</button>
+    <div id="result"></div>
+    <ul id="historyList"></ul>
+    </div>
 </body>
+
 </html>

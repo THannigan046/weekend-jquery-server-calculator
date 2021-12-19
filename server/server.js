@@ -1,3 +1,4 @@
+// server init stuff 
 const express = require('express')
 
 const app = express();
@@ -8,6 +9,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 app.use(express.static('server/public'));
+
+//define array and id to store stuff and access it
 const historyArray = [];
 let id = 0 
 

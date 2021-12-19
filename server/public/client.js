@@ -5,6 +5,7 @@ function onReady() {
     console.log('JQ'); 
     getHistory();
     $('.mathButton').on('click', function () {
+        //pulled hair out, but found this.html
         mathButton = $(this).html();
     })
     $('#equalsButton').on('click', evaluate)
@@ -17,7 +18,7 @@ function getHistory() {
         url: '/history'
     }).then(
         response => {
-            $('historyList').empty()
+            $('#historyList').empty()
             response.forEach(element => {
                 let historyItem = $(`
                 <li>${element.numerator} ${element.mathButton} ${element.denominator} = ${element.result}</li>
@@ -31,6 +32,7 @@ function getHistory() {
 }
 
 function evaluate() {
+    //pulls inputs and creates data object 
     let numerator = $('#numeratorInput').val()
     let denominator = $('#denominatorInput').val()
     let equalsObj = {
@@ -38,6 +40,7 @@ function evaluate() {
          denominator: denominator,
          mathButton: mathButton
         }
+        //input validation
     if (numerator === '' || denominator === '' || mathButton === '') {
         return;
     }
